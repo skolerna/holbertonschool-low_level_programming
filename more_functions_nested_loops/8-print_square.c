@@ -2,12 +2,18 @@
 
 /**
  * print_square - Prints a square
- * @size: The size of the square to print
+ * @size: The size of the square
  */
 void print_square(int size)
 {
 	int i;
 	int j;
+
+	if (size <= 0)
+	{
+		_putchar('\n');
+		return;
+	}
 
 	i = 0;
 
