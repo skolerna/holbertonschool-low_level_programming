@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _strpbrk - Finds the first occurence of any character from a string
@@ -28,11 +29,11 @@ char *_strpbrk(char *s, char *accept)
 			j++;
 		}
 
-		if (found == 0)
+		if (found == 1)
 		{
-			return (i);
+			return (s + i);
 		}
 		i++;
 	}
-	return (i);
+	return (NULL);
 }
