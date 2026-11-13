@@ -11,7 +11,8 @@ int main(void)
 	int choice = 1;
 	int a, b;
 	int result;
-/* Loop to display the menu */
+
+	/* Loop to display the menu */
 	while (choice != 0)
 	{
 		printf("Simple Calculator\n");
@@ -23,33 +24,39 @@ int main(void)
 
 		printf("Choice: ");
 		scanf("%d", &choice);
-/* If choice is invalid */
+
+		/* If choice is invalid */
 		if (choice > 4 || choice < 0)
 		{
 			printf("Invalid choice\n");
 		}
-/* If choice is add */
-		if (choice == 1)
+
+		/* To calculate */
+		if (choice >= 1 && choice <= 4)
 		{
 			printf("A: ");
 			scanf("%d", &a);
 
 			printf("B: ");
 			scanf("%d", &b);
+			
+			/* Addition */
+			if (choice == 1)
+				result = a + b;
 
-			result = a + b;
-
-			printf("Result: %d\n", result);
-		}
-/* If choice is subtract */
-		else if (choice == 2)
-		{
-			result = a - b;
+			/* Subtraction */
+			else if (choice == 2)
+				result = a - b;
+			
+			/* Multiplication */
+			else if (choice == 3)
+				result = a * b;
 
 			printf("Result: %d\n", result);
 		}
 	}
-/* If choice is 0 */
+
+	/* If choice is 0 */
 	printf("Bye!\n");
 
 	return (0);
