@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - Simple calculator with a menu
+ * main - Simple calculator
  *
  * Return: Always 0
  */
@@ -39,20 +39,41 @@ int main(void)
 
 			printf("B: ");
 			scanf("%d", &b);
-			
+
 			/* Addition */
 			if (choice == 1)
+			{
 				result = a + b;
+				printf("Result: %d\n", result);
+			}
 
 			/* Subtraction */
 			else if (choice == 2)
+			{
 				result = a - b;
-			
+				printf("Result: %d\n", result);
+			}
+
 			/* Multiplication */
 			else if (choice == 3)
+			{
 				result = a * b;
+				printf("Result: %d\n", result);
+			}
 
-			printf("Result: %d\n", result);
+			/* Division */
+			else if (choice == 4)
+			{
+				if (b == 0)
+				{
+					printf("Error: Division by zero\n");
+				}
+				else
+				{
+					result = a / b;
+					printf("Result: %d\n", result);
+				}
+			}
 		}
 	}
 
