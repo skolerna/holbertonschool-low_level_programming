@@ -41,6 +41,13 @@ int main(void)
 
 			printf("Result: %d\n", result);
 		}
+/* If choice is subtract */
+		else if (choice == 2)
+		{
+			result = a - b;
+
+			printf("Result: %d\n", result);
+		}
 	}
 /* If choice is 0 */
 	printf("Bye!\n");
