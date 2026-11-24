@@ -1,0 +1,12 @@
+# Fichiers objets générés par GCC
+*.o
+
+# Exécutables portant des noms spécifiques
+*.out
+*.exe
+
+# Programme de débogage
+dynamic_analysis/debug_program
+
+# Dossier temporaire du tutoriel GDB
+gdb_training/
